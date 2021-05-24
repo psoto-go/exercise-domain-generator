@@ -1,52 +1,69 @@
-# Hello World with Vanilla JS
+# The Domain Name Generator
 
-Start coding in 30 seconds by opening this template in gitpod:
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/vanillajs-hello.git)
+Finding a domain name is hard, why not automate it? :)
 
-### Manual Installation
 
-1) Remember to install the npm packages first:
-```
-$ npm install
-```
+## 🌱  How to start this project
 
-2) Build and Start coding!
+Do not clone this repository.
 
-Build the application for the first time...
+The first step to start coding is cloning the [vanillajs boilerplate](https://github.com/4GeeksAcademy/vanillajs-hello) on your local computer or opening it using gitpod.
 
-```
-$ npm run start
-```
+a) If using Gitpod (recommended) you can clone the boilerplate by [clicking here](https://github.com/4GeeksAcademy/vanillajs-hello).
 
-And start coding your Vanilla.js application, update the `src/index.html`, `src/index.css` or `src/app.js` depending on your needs.
+b) If working locally type the following command from your command line: `$ git clone https://github.com/4GeeksAcademy/vanillajs-hello`.
 
-## FAQ
+💡 Important: Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
 
-#### 1) How do I run my code?
+### Then follow this steps:
 
-- Type on the command line `$ npm run start` and type localhost on the browser.
+1. Create one `app.js` javascript file.
+2. Add your code inside your app.js file.
+3. You have to use `console.log("Any string");` to show something on the console.
+4. Run your code by typing: `$ node app.js`, **if you run it locally, make sure you have node.js**
 
-#### 2) Where do I write my code?
-It depends on the language, but you have `./src/js/app.js`, `./src/style/index.css` and `./isrc/index.html` respectively, you can add new `.html` as you please, just make sure to include import it on the index.js.
 
-__Note:__ remember that the JS workflow starts inside `window.onload`.
+## 📝 Instructions
 
-#### 3) I don't see my changes.
+Create a script that generate all the possible domain name combinations
+from a list of pronouns, adjectives and nouns, for example:
 
-Everytime you change any file inside the `./src` folder the website public URL will automatically refresh the changes (it's a process called hot deploy)
-Remember also to refresh cleaning the cache (command+shift+r on mac, control+shift+r on pc & linux)
-
-#### 4) How do I include more images on my project?
-Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
-
-#### 5) How do I include more JS files?
-Just add the files into the JS folder and import the file/variables into your index.js. E.g: `import myVar from "./file2.js"`
-
-#### 6) How do I publish the website?
-
-This boilerplate is 100% compatible with the free github pages hosting. Publish your website by running:
-```sh
-$ npm run deploy
+```js
+  let pronoun = ['the','our'];
+  let adj = ['great', 'big' ];
+  let noun = ['jogger','racoon'];
 ```
 
-Very easy and in just one step!  Push to your __master__ branch and use the free hosting that comes with [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), the project is ready to be published. Remember to choose to run the Github Page from your master branch.
+Should generate something like:
+
+```bash
+thegreatjogger.com
+thegreatracoon.com
+ourgreatjogger.com
+ourgreatracoon.com
+thebigjogger.com
+thebigracoon.com
+ourbigjogger.com
+ourbigracoon.com
+```
+
+### 💡Hint
+
+You'll need to use nested for loops in order to mix the different values together.
+
+Your tools: For loop, string concatenation.
+
+## 😎 Feeling confident?
+
+- Add several types of extensions: .com, .net, .us, .io, etc.
+- Add domain hacks, for example: instead of `lastOfUs.com` you can use the `.us` domain like this: `lastOf.us`
+
+## A bit of history about the project
+
+Before the domain market was centralized and converted into a mafia 
+controlled by Godaddy, Enom and some others. Normal people like you and me 
+were able to buy a .com domain relatively easy. 
+
+In fact, this project was originally built in 2002 by one of 4Geeks teachers 
+while he was trying to find domain names to buy for several projects.
+
