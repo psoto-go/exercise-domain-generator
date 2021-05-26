@@ -3,12 +3,14 @@ import "bootstrap";
 import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-function generateUrls(pronuns, arr2, arr3) {
+function generateUrls(pronuns, arr2, arr3, point) {
   let results = [];
   for (var i in pronuns) {
     for (var j in arr2) {
       for (var k in arr3) {
-        results.push(pronuns[i] + "." + arr2[j] + "." + arr3[k]);
+        for (var h in point) {
+          results.push(pronuns[i] + "." + arr2[j] + "." + arr3[k] + point[h]);
+        }
       }
     }
   }
@@ -25,10 +27,11 @@ function generateBr(array) {
 var pronoun = ["the", "our"];
 var adj = ["great", "big"];
 var noun = ["jogger", "racoon"];
+var point = [".com", ".net", ".us", ".io,"];
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
-  let r = generateBr(generateUrls(pronoun, adj, noun));
+  let r = generateBr(generateUrls(pronoun, adj, noun, point));
   let container = document.getElementById("urls");
   container.innerHTML = r;
 };
