@@ -16,9 +16,11 @@ function generateUrls(pronuns, arr2, arr3) {
 }
 
 function generateBr(array) {
+  var finale = [];
   for (var i in array) {
-    document.write(array[i] + "<br></br>");
+    finale.push(array[i] + "<br/>");
   }
+  return finale;
 }
 var pronoun = ["the", "our"];
 var adj = ["great", "big"];
