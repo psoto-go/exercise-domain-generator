@@ -8,11 +8,17 @@ function generateUrls(pronuns, arr2, arr3) {
   for (var i in pronuns) {
     for (var j in arr2) {
       for (var k in arr3) {
-        results.push(pronuns[i] + "." + arr2[j] + "." + arr3[k] + "\n");
+        results.push(pronuns[i] + "." + arr2[j] + "." + arr3[k]);
       }
     }
   }
   return results;
+}
+
+function generateBr(array) {
+  for (var i in array) {
+    document.write(array[i] + "<br></br>");
+  }
 }
 var pronoun = ["the", "our"];
 var adj = ["great", "big"];
@@ -20,7 +26,7 @@ var noun = ["jogger", "racoon"];
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
-  let r = generateUrls(pronoun, adj, noun);
+  let r = generateBr(generateUrls(pronoun, adj, noun));
   let container = document.getElementById("urls");
   container.innerHTML = r;
 };
